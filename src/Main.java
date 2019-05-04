@@ -1,16 +1,19 @@
 public class Main {
 
     public static void main(String[] args) {
-        for (int i = 1; i < 8; i++) {
-            if ( (i == 1) || (i == 7) ) {
-                System.out.print("# ");
-            } else if ((i == 2) || (i == 6)) {
-                System.out.print("## ");
-            } else if ((i == 3) || (i == 5)) {
-                System.out.print("### ");
+        int n = 6;
+        System.out.print(n + " ");
+        int count = 1;
+        while (n != 1) {
+            if (n%2 == 0) {
+                n = n/2;
+                System.out.print(n + " ");
             } else {
-                System.out.print("#### ");
+                n = 3*n + 1;
+                System.out.print(n + " ");
             }
+            count++;
         }
+        System.out.println("\n" + count);
     }
 }
