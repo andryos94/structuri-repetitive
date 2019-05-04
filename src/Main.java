@@ -1,19 +1,27 @@
 public class Main {
 
-    public static void main(String[] args) {
-        int n = 6;
-        System.out.print(n + " ");
-        int count = 1;
-        while (n != 1) {
-            if (n%2 == 0) {
-                n = n/2;
-                System.out.print(n + " ");
-            } else {
-                n = 3*n + 1;
-                System.out.print(n + " ");
+    static int maxNumber (int[] randArray ) {
+        int max = 0;
+        for (int i=0;i<randArray.length;i++) {
+            if (randArray[i]>max) {
+                max = randArray[i];
             }
-            count++;
         }
-        System.out.println("\n" + count);
+        return max;
+    }
+    ///metoda maxNumber functioneaza, dar nu o folosesc momentan;
+
+    public static void main(String[] args) {
+        int[] firstArray = new int[]{6,10,3,7,1,0,20,19,32,15};
+        int l = firstArray.length;
+        int max = 0;
+        for (int i=0;i<l;i++) {
+            if((firstArray[i]%2 != 0) && (firstArray[i]>max)) {
+                max = firstArray[i];
+            } else {
+                System.out.println("no");
+            }
+        }
+        System.out.println(max);
     }
 }
