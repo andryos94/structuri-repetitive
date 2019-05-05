@@ -1,27 +1,18 @@
 public class Main {
 
-    static int maxNumber (int[] randArray ) {
-        int max = 0;
-        for (int i=0;i<randArray.length;i++) {
-            if (randArray[i]>max) {
-                max = randArray[i];
-            }
-        }
-        return max;
-    }
-    ///metoda maxNumber functioneaza, dar nu o folosesc momentan;
-
     public static void main(String[] args) {
-        int[] firstArray = new int[]{6,10,3,7,1,0,20,19,32,15};
+        int[] firstArray = new int[]{6,10,3,7,1,0,20,19,32};
         int l = firstArray.length;
-        int max = 0;
+        int count_pare = 0;
+        int count_impare = 0;
         for (int i=0;i<l;i++) {
-            if((firstArray[i]%2 != 0) && (firstArray[i]>max)) {
-                max = firstArray[i];
+            if(firstArray[i]%2 != 0) {
+                count_impare++;
             } else {
-                System.out.println("no");
+                count_pare++;
             }
         }
-        System.out.println(max);
+        System.out.println("Exista " + count_impare + " numere impare");
+        System.out.println("Exista " + count_pare + " numere pare");
     }
 }
