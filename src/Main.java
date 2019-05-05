@@ -1,21 +1,25 @@
 public class Main {
 
     public static void main(String[] args) {
-        int n = 134;
-        int m = 431;
-        int invers = 0;
-        int r;
-        int c = n;
+        int n = 1234567;
+        int i = 0;
+        while (n != 0) {
+            n = n/10;
+            i++;
+        }
+        System.out.println(i);//digits number
+
+        int[] digitsArray = new int[i];
+        int c = 1234567;
+        int sum = 0;
         while (c != 0) {
-            r = c%10;
+            digitsArray[i-1] = c%10;
+            if ((i-1)%2 == 0) {
+                sum = sum + digitsArray[i-1];
+            }
             c = c/10;
-            invers = invers*10 + r;
+            i--;
         }
-        System.out.println(invers);
-        if (invers == m) {
-            System.out.println("true");
-        } else {
-            System.out.println("false");
-        }
+        System.out.println(sum);//suma cifrelor numarului n de pe pozitii pare
     }
 }
