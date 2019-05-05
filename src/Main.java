@@ -1,13 +1,14 @@
 public class Main {
 
     public static void main(String[] args) {
-        int a = 5;
-        int b = 2;
-        int prod = 1;
-        while (b != 0) {
-            prod = a * prod;
-            b--;
+        int n = 7;
+        for (int i=1;i<=n;i++) {
+            for (int k=1;k<=i;k++) {
+                System.out.print(k + " ");
+                if (k == i){
+                    System.out.print("\n");
+                }
+            }
         }
-        System.out.println(prod);
     }
 }
